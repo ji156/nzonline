@@ -1,0 +1,29 @@
+# Virtual environment
+venv_nzonline/
+
+# Ignore database files
+*.sqlite3
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+
+# Ignore local settings
+.env
+
+# Ignore log files
+*.log
+
+# Ignore static and media files
+/static/
+/media/
+
+# Ignore dependencies
+/node_modules/
+/yarn-error.log
