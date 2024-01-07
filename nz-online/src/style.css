@@ -160,6 +160,8 @@ ul {
   text-align: center;
   border: 1px solid #e1e1e1;
   background: white;
+  margin-bottom: 25px;
+  border-radius: 10px;
 }
 @media (min-width: 550px) {
   .card {

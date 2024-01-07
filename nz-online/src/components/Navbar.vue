@@ -3,13 +3,13 @@
     <header id="header" class="header">
       <div class="container">
         <div class="row">
-          <div class="four columns pb-4">
-            <img src="../img/logo.gif" id="logo" />
+          <div class="four columns pb-3">
+            <img src="../img/logo.svg" id="logo" />
           </div>
           <div class="two columns u-pull-right">
             <ul>
               <li class="submenu">
-                <img class="pt-4" src="../img/cart.png" id="img-carrito" />
+                <img class="pt-6" src="../img/cart.svg" id="img-carrito" />
                 <div id="carrito">
                   <table id="lista-carrito" class="u-full-width">
                     <thead>

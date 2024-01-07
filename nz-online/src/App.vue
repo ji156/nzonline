@@ -7,6 +7,7 @@
     />
     <Principal />
     <Cursos @curso-agregado="agregarCursoAlCarrito" />
+    <Footer />
   </div>
 </template>
 
@@ -14,12 +15,14 @@
 import Navbar from "./components/Navbar.vue";
 import Cursos from "./components/Cursos.vue";
 import Principal from "./components/Principal.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   components: {
     Navbar,
     Cursos,
     Principal,
+    Footer,
   },
   data() {
     return {

@@ -6,7 +6,7 @@
           <div class="six columns">
             <div class="contenido-hero">
               <h2>Aprende algo nuevo</h2>
-              <p>Todos los cursos a $15</p>
+              <p>Todos los cursos a 15€</p>
               <form action="#" id="busqueda" method="post" class="formulario">
                 <input
                   class="u-full-width"

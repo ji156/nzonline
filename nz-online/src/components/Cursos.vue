@@ -3,7 +3,7 @@
     <div id="lista-cursos" class="container">
       <h1 id="encabezado" class="encabezado">Cursos En Línea</h1>
       <div class="row">
-        <div class="four columns" v-for="curso in cursos" :key="curso.id">
+        <div class="three columns" v-for="curso in cursos" :key="curso.id">
           <div class="card">
             <img
               :src="curso.imagen"
@@ -15,11 +15,9 @@
               <p>{{ curso.autor }}</p>
               <img src="../img/estrellas.png" />
               <p class="precio">
-                {{ convertirPrecio(curso.precio, curso.pais) }}
-                <span class="u-pull-right">{{
-                  convertirPrecio(15, curso.pais)
-                }}</span>
+                <p class="precio">{{ curso.precio }} <span class="u-pull-right">15€</span></p>
               </p>
+              <button @click="verDetallesCurso(curso.id)">info</button>              
               <a
                 href="#"
                 class="u-full-width button-primary button input agregar-carrito"
@@ -41,13 +39,9 @@ export default {
   data() {
     return {
       cursos: [],
-      userCountry: "",
-      conversionRates: {},
     };
   },
   mounted() {
-    this.getUserCountry();
-    this.obtenerConversionRates();
     this.obtenerCursos();
   },
   methods: {
@@ -61,66 +55,31 @@ export default {
           console.error("Error al obtener los cursos:", error);
         });
     },
-    getUserCountry() {
-      axios
-        .get("http://ip-api.com/json")
-        .then((response) => {
-          this.userCountry = response.data.countryCode;
-        })
-        .catch((error) => {
-          console.error("Error al obtener la ubicación del usuario:", error);
-        });
-    },
-    obtenerConversionRates() {
-      const API_KEY = "05a73cfc619105e7ab515fe8";
-      const BASE_URL = `https://v6.exchangeratesapi.io/latest?base=USD&access_key=${API_KEY}`;
-
-      axios
-        .get(BASE_URL)
-        .then((response) => {
-          this.conversionRates = response.data.rates;
-        })
-        .catch((error) => {
-          console.error("Error al obtener los tipos de cambio:", error);
-        });
-    },
-    convertirPrecio(precio, pais) {
-      const factorConversion = this.conversionRates[pais] || 1;
-      const precioConvertido = (precio * factorConversion).toFixed(2);
-      return `${this.getMoneda(pais)} ${precioConvertido}`;
-    },
-    getMoneda(pais) {
-      const monedas = {
-        US: "$",
-        MX: "$",
-        EU: "€",
-        THA: "฿",
-        COL: "$",
-        AR: "$",
-        PE: "S/",
-        CH: "¥",
-        BR: "R$",
-        VE: "Bs",
-        CO: "$",
-        CR: "₡",
-        EC: "$",
-        PA: "B/.",
-        PY: "₲",
-        UY: "$",
-        GT: "Q",
-        HN: "L",
-        NI: "C$",
-        SV: "$",
-      };
-      return monedas[pais] || "";
-    },
     agregarAlCarrito(curso) {
       this.$emit("curso-agregado", curso);
+    },
+    verDetallesCurso(cursoId) {
+      this.$router.push({ name: "detalles-curso", params: { id: cursoId } });
     },
   },
 };
 </script>
+<style scoped>
+/* Estilos para la tarjeta */
+.card {
+  position: relative;
+}
 
-<style>
-/* Estilos opcionales para este componente */
+/* Estilos para el botón 'info' */
+.info-card button {
+  position: absolute;
+  top: 10px; /* Ajusta este valor para la distancia desde arriba */
+  right: 10px; /* Ajusta este valor para la distancia desde la derecha */
+  /* Otros estilos opcionales para el botón */
+  background-color: #f1f1f1;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 </style>
