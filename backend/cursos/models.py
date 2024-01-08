@@ -9,6 +9,7 @@ class Cursos(models.Model):
         ('Desarrollo Web', 'Desarrollo Web'),
         ('Diseño Gráfico', 'Diseño Gráfico'),
         ('Programación', 'Programación'),
+        ('Salud', 'Salud'),
 
         # Agrega más categorías según sea necesario
     ]
@@ -19,7 +20,9 @@ class Cursos(models.Model):
     precio = models.IntegerField()
     precio_oferta = models.IntegerField()
     imagen = models.ImageField(upload_to='cursos_imagenes/')
-    fecha = models.DateField()
+    horario = models.CharField(max_length=50, default='')
+    fecha_inicio = models.DateField()
+    fecha_fin = models.DateField()
     categoria = models.CharField(max_length=50, choices=CATEGORIAS)
     estado = models.BooleanField(default=True)
     autor = models.CharField(max_length=50)

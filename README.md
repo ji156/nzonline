@@ -21,7 +21,7 @@ Este proyecto es una plataforma de cursos online que permite a los usuarios acce
 
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/tuusuario/plataforma-cursos-online.git`
+1. Clona este repositorio: `git clone https://github.com/ji156/nzonline.git`
 2. Configura el entorno virtual: `python -m venv venv`
 3. Activa el entorno virtual: `source venv/bin/activate` (Linux/Mac) o `venv\Scripts\activate` (Windows)
 4. Instala las dependencias: `pip install -r requirements.txt`
