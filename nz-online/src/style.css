@@ -103,24 +103,13 @@ ul {
 
 .barra {
   padding: 20px 0;
-  background: #741d51; /* Old browsers */
-  background: -moz-linear-gradient(
-    left,
-    #741d51 0%,
-    #e44e52 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    left,
-    #741d51 0%,
-    #e44e52 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to right,
-    #741d51 0%,
-    #e44e52 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+  background: #8fd3f4; /* Azul claro */
+  background: -moz-linear-gradient(left, #8fd3f4 0%, #85e3a6 100%);
+  background: -webkit-linear-gradient(left, #8fd3f4 0%, #85e3a6 100%);
+  background: linear-gradient(to right, #8fd3f4 0%, #85e3a6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fd3f4', endColorstr='#85e3a6', GradientType=1);
 }
+
 
 .barra p {
   margin: 0;

@@ -75,5 +75,11 @@ export default {
 </script>
 
 <style>
-/* Estilos opcionales para este componente */
-</style>
+.header {
+  padding: 20px 0;
+  background: #8fd3f4; /* Azul claro */
+  background: -moz-linear-gradient(left, #8fd3f4 0%, #85e3a6 100%);
+  background: -webkit-linear-gradient(left, #8fd3f4 0%, #85e3a6 100%);
+  background: linear-gradient(to right, #8fd3f4 0%, #85e3a6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fd3f4', endColorstr='#85e3a6', GradientType=1);
+}</style>
