@@ -1,8 +1,6 @@
 # Virtual environment
 venv_nzonline/
 
-# Ignore database files
-*.sqlite3
 
 # Ignore compiled Python files
 __pycache__/
