@@ -42,10 +42,3 @@ Este proyecto es una plataforma de cursos online que permite a los usuarios acce
 - Accede al admin backend desde tu navegador: `http://localhost:5173`
 - Explora el catálogo de cursos, inscríbete en los que te interesen y disfruta del material educativo.
 
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! Siéntete libre de abrir un pull request para sugerir mejoras, correcciones de errores o nuevas características.
-
-## Licencia
-
-Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
