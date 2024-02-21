@@ -28,7 +28,6 @@ Este proyecto es una plataforma de cursos online que permite a los usuarios acce
 5. Instala las dependencias: `pip install -r requirements.txt`
 6. Entra en la carpeta backend: `cd backend`
 7. Ejecuta las migraciones: `python3 manage.py makemigrations` `python manage.py migrate`
-8. Si queremos crear un superusuario para entrar al admin de django: `python3 manage.py createsuperuser` 
 8. Inicia el servidor: `python3 manage.py runserver`
 9. Regresa al directorio anterior: `cd ..`
 10. Entra en la carpeta nz-online: `cd nz-online`
@@ -39,6 +38,6 @@ Este proyecto es una plataforma de cursos online que permite a los usuarios acce
 ## Uso
 
 - Accede a la plataforma desde tu navegador: `http://localhost:5173`
-- Accede al admin backend desde tu navegador: `http://localhost:5173`
+- Accede al admin backend desde tu navegador: `http://localhost:8000/admin` credenciales: admin admin. Si queremos crear un superusuario para entrar al admin de django: `python3 manage.py createsuperuser` 
 - Explora el catálogo de cursos, inscríbete en los que te interesen y disfruta del material educativo.
 
